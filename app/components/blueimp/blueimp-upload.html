@@ -1,0 +1,35 @@
+<div class="generic-container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="lead" style="font-size: 20px;">PROCESS STREET ANGULARJS TEST</span>
+            <div class="upload-container">
+                <form class="form-inline">
+                    <input type="file" class="filestyle" data-buttonName="btn-primary" data-buttonText="Upload Video">
+                </form>
+            </div>
+        </div>
+        <div class="panel-body video-container">
+            <div class="loader-container" ng-show="$ctrl.showUploadLoader">
+                <div id="progress" class="progress">
+                    <div class="progress-bar progress-bar-success" ng-style="$ctrl.progress"></div>
+                </div>
+                <h5 style="text-align: center;">{{$ctrl.loaderText}}</h5>
+            </div>
+            <div class="loader-container" ng-show="$ctrl.showIntroText">
+                <h4 style="text-align: center;">This app demonstrates how to upload videos to Wistia using AngularJS and Blueimp jQuery-File-Upload plugin.</h4>
+            </div>
+
+            <div ng-show="!$ctrl.showIntroText && !$ctrl.showUploadLoader">
+                <div class="wistia_embed" style="height: 100%; width: 100%;" ng-bind-html="$ctrl.videoPreviewHtml"></div>
+                <div class="loading" ng-show="!$ctrl.videoIsReady">
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <div class="loading-bar"></div>
+                    <h4 class="loading-text">{{$ctrl.videoName}} is being processed. Please wait...</h4>
+                    <h5 class="loading-text">{{$ctrl.processingProgress}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
