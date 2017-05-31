@@ -30,4 +30,4 @@ The simplest way to start this server is:
 npm start
 ```
 
-Now navigate to the app at http://localhost:8080.
+Now navigate to the app at [http://localhost:8080](http://localhost:8080).
