@@ -52,6 +52,7 @@
 
 						$timeout(function() {
 							ctrl.showUploadLoader = false;
+							ctrl.videoIsReady = false;
 							ctrl.videoName = response.data[0].name;
 							ctrl.processingProgress = progress + '%';
 							ctrl.videoPreviewHtml = $sce.trustAsHtml(imageHtml);
